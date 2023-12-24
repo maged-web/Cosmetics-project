@@ -9,35 +9,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     //
-   /*  public function index()
-    {
-        $customerRole = Role::where('name', 'customer')->first();
 
-        $customerUsers = $customerRole->users;
-                   
-        return view('users',['customerUsers'=>$customerUsers]);
-    }
-    public function blockUser($id)  
-    {
-        $user = User::find($id);
-
-        if ($user) {
-            $user->blocked = true;
-            $user->save();
-        }
-        return redirect()->back();
-    }
-    
-    public function unBlockUser($id)
-    {
-        $user = User::find($id);
-
-        if ($user) {
-            $user->blocked = false;
-            $user->save();
-        }
-        return redirect()->back();
-    } */
     use ApiResponseTrait;
     public function showAllCustomers()
     {   

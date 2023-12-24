@@ -29,7 +29,7 @@ Route::middleware(['check_block_status'])->group(function()
 
 
 
-Route::get('/admin/users', [App\Http\Controllers\UserController::class, 'index'])->name('index');
+/* Route::get('/admin/users', [App\Http\Controllers\UserController::class, 'index'])->name('index');
 Route::post('/admin/blockuser/{id}', [App\Http\Controllers\UserController::class, 'blockUser'])->name('user.block');
 Route::post('/admin/unblockuser/{id}', [App\Http\Controllers\UserController::class, 'unBlockUser'])->name('user.unblock');
 
@@ -56,3 +56,4 @@ Route::delete('/admin/messages/center/reply/delete/{msgID}', [App\Http\Controlle
 Route::delete('/messages/center/send/delete/{msgID}', [App\Http\Controllers\MessageController::class, 'deletaAdminMessage'])->name('messages.delete');
 Route::get('/messages/center/edit/{msgID}', [App\Http\Controllers\MessageController::class, 'editMessage'])->name('messages.edit');
 Route::post('/messages/center/edit/send/{msgID}', [App\Http\Controllers\MessageController::class, 'editMessageSend'])->name('messages.edit.send');
+ */
