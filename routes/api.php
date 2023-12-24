@@ -67,3 +67,12 @@ Route::delete('/messages/center/delete/{msgID}', [App\Http\Controllers\MessageCo
  */
 
 Route::post('/messages/center/update/send/{msgID}', [App\Http\Controllers\MessageController::class, 'editMessageSend'])->name('messages.update.send');
+
+
+Route::post('admin/messages/center/sendPhoto/{id}', [App\Http\Controllers\MessageController::class, 'sendPhotoByAdmin'])->name('admin.messages.center.send.Photo');
+
+Route::post('/messages/center/sendPhoto/', [App\Http\Controllers\MessageController::class, 'sendPhotoByUser'])->name('messages.center.send.Photo');
+
+Route::post('admin/messages/center/sendVoice/{id}', [App\Http\Controllers\MessageController::class, 'sendVoiceByAdmin'])->name('admin.messages.center.send.voice');
+
+Route::post('/messages/center/sendVoice/', [App\Http\Controllers\MessageController::class, 'sendVoiceByUser'])->name('messages.center.send.voice');

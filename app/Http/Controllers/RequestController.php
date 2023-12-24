@@ -13,7 +13,45 @@ use Illuminate\Support\Facades\Notification;
 class RequestController extends Controller
 {
     //
-   
+   /*  public function createRequest()
+    {
+        return view('requestCreate');
+    }
+    public function sendRequest(Request $request)
+    {
+        $dataRequest=ModelsRequest::create([
+            'user_id'=>$request->input('user_id'),
+            'title'=>$request->title,
+            'body'=>$request->body
+        ]);
+        $user_send=auth()->user()->name;
+
+        $admins = User::whereHas('roles', function ($query) {
+            $query->where('name', 'admin');
+        })->get();    
+            Notification::send($admins,new SendRequest($dataRequest->id,$user_send,$dataRequest->title));
+        return redirect()->route('home');
+    }
+
+    public function showRequest($id)
+    {
+        $requestData=ModelsRequest::findOrFail($id);
+        $getId=DB::table('notifications')->where('data->request_id',$id)->pluck('id');
+        DB::table('notifications')->where('id',$getId)->update(['read_at'=>now()]);
+        return $requestData;
+
+    }
+    public function markAsRead()
+    {
+        $user=User::find(auth()->user()->id);
+        foreach($user->unreadNotifications as $notification)
+        {
+            $notification->markAsRead();
+        }
+        return redirect()->back();
+    }
+ */
+
  use ApiResponseTrait;
 
  //This is simulation for sending any request just to get notifications
